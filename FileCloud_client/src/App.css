@@ -144,7 +144,7 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   width: 100%;
 }
 
@@ -179,4 +179,77 @@
 .sfile a{
   text-decoration: none;
   color: black;
+}
+.mainlogin{
+  background-color:  rgb(62, 62, 239);
+  height: 100vh;
+  display: flex;
+}
+.mainlogin .part1{
+  flex: 2;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainlogin .part2{
+  flex: 1;
+}
+.part2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.part2 form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+  /* background-color: red; */
+}
+.part2 form input{
+  width: 70%;
+  margin-top: 20px;
+  height: 30px;
+  background-color: transparent;
+  border-width: 0px 0px 1px 0px;
+  border-color: white;
+  color: white;
+}
+/* input:focus{
+  border-width: 0px 0px 1px 0px;
+  background-color: red;
+} */
+
+.part2 form button{
+  width: 70%;
+  margin-top: 20px;
+  height: 30px;
+  border-radius: 16px;
+  border: 0px;
+  font-weight: 700;
+  color:  rgb(62, 62, 239);;
+}
+.part2 form button:hover{
+  background-color: rgb(195, 195, 195);
+  transition: 0.3s ease;
+  transform: scale(1.02);
+}
+
+.part2 form h2{
+
+  letter-spacing: 10px;
+  color: white;
+}
+
+.part2 form p{
+  font-size: 12px;
+  margin-top: 10px;
+  color: white;
+}
+.part2 form p .register{
+  color:  white  ;
 }

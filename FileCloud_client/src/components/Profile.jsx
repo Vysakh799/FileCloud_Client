@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import "../App.css";
 
 
 const Profile=()=>{
@@ -20,7 +21,7 @@ const Profile=()=>{
             if(response.status==200){
                 setUser(response.data);
             }
-            
+
         };
         fetchUser();
     }, []);
