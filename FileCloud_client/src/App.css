@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+  margin: 0px;
+}
+.main{
+  background-color: white;
+}
+.navbar{
+  background-color: rgb(62, 62, 239);
+  display: flex;
+  height: 60px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+}
+.logo{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img{
+  width: 150px;
+}
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+}
+.search input{
+  width: 100%;
+  height: 30px;
+  border-radius: 18px;
+  padding-left: 10px;
+  border: 1px solid black;
+}
+.search .searchlogo{
+  position: relative;
+  right: 35px;
+  top: 1px;
+  color: grey;
+}
+.services{
+  flex:3;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.services ul{
+  display: flex;
+  /* background-color: red; */
+  width: 50%;
+  list-style-type: none;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+}
+.services .serv{
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+.main2{
+  display: flex;
+  height: 92vh;
+}
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  /* background-color: rgb(227, 227, 227); */
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  justify-content: space-between;
+}
+.sidebar .head{
+  font-weight: 600;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.content{
+  padding: 10px;
+  /* background-color: blue; */
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.folder_name{
+  background-color: rgb(255, 255, 255);
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.file_folder1{
+  background-color: rgb(212, 212, 212);
+}
+.folder_name:hover{
+  background-color: rgb(212, 212, 212);
+}
+.icn{
+  font-size: 19px;
+  margin-right: 10px;
+}
+
+.addfile{
+  box-shadow: rgba(0, 0, 0, 1   ) 0px 22px 70px 4px;  
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;align-items: center;
+  position: fixed;
+  right: 80px;
+  bottom: 80px;
+}
+
+.addfile .uicn{
+  font-size: 50px;
+  font-weight: 700;
+  color: rgb(62, 62, 239);
+}
+
+.addfile:hover .uicn{
+  color: white;
+  transition: 0.5s ease;
+}
+.addfile:hover{
+  background-color: rgb(62, 62, 239);;
+  transition: 0.5s ease;
+}
+
+.files{
+  /* background-color: red; */
+  width: 100%;
+}
+.files ul{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.sfile img{
+  width: 70px;
+}
+.sfile{
+  /* width: 100px; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* background-color: red;  */
+  height: 100px;
+  padding: 10px;
+  /* align-items: center; */
+}
+.files ul li{
+  border-radius: 14px;
+}
+.files ul li:hover{
+  transition: 0.8s ease;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.truncated-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px; /* Adjust width as needed */
+  display: inline-block;
+  font-size: 14px;
+}
+.sfile a{
+  text-decoration: none;
+  color: black;
+}
