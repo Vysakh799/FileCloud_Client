@@ -6,7 +6,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import FileUpload from './components/FileUpload';
 
-const App = () => {
+const App = () => { 
   return (
     <Router>
       <Routes>

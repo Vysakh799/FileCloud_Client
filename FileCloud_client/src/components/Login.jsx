@@ -16,7 +16,7 @@ const Login = ()=>{
                 username,
                 password,
             });
-            localStorage.setItem('token',response.data.access);
+            sessionStorage.setItem('token',response.data.access);
             alert('Login Successfull');
             navigate('/home')
         }

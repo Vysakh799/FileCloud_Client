@@ -16,7 +16,7 @@ const Home = () =>{
             try{
                 const response=await axios.get('http://127.0.0.1:8000/api/files/',{
                     headers:{
-                        'Authorization': `Bearer ${localStorage.getItem('token')}`
+                        'Authorization': `Bearer ${sessionStorage.getItem('token')}`
                     }
                 });
                 setFiles(response.data);
@@ -33,7 +33,7 @@ const Home = () =>{
         fetchFiles();
     }, []);
     const logout = () => {
-        localStorage.removeItem('token');  // Remove JWT token from localStorage
+        sessionStorage.removeItem('token');  // Remove JWT token from localStorage
         window.location.href = '/';    // Redirect to login page
       };
 
@@ -51,7 +51,7 @@ const Home = () =>{
                 <div className="services">
                     <ul>
                         <li>
-                            <Link to="/home" className="serv">Home</Link>
+                            <Link to="/home" className="serv active">Home</Link>
                         </li>
                         <li>
                             <Link to="/profile" className="serv"><span className="material-symbols-outlined">person</span></Link>
@@ -114,7 +114,7 @@ settings
             </ul>
             </div>
             <div className="addfile">
-            <Link to={'/fileupload'}><span class="material-symbols-outlined  uicn">
+            <Link to={'/fileupload'}><span className="material-symbols-outlined  uicn">
 add
 </span></Link>
             </div>

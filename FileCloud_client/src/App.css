@@ -2,6 +2,9 @@
 
 *{
   margin: 0px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 .main{
   background-color: white;
@@ -28,7 +31,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 2;
+  flex: 3;
 }
 .search input{
   width: 100%;
@@ -44,7 +47,7 @@
   color: grey;
 }
 .services{
-  flex:3;
+  flex:2;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -252,4 +255,136 @@
 }
 .part2 form p .register{
   color:  white  ;
+}
+.profpic{
+  /* background-color: red; */
+}
+.pmain .psidebar{
+  display: flex;
+  height: 89.5vh;
+  width: 200px;
+  padding:10px;
+  flex-direction: column  ;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.profpic img{
+  height: 200px;
+}
+.editicon{
+  background-color: red;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 50%;
+  color:  rgb(62, 62, 239);
+  background-color: rgb(220, 220, 220);
+  position: relative;
+  bottom: 50px;
+  left: 140px;
+}
+.details .folder_name{
+  background-color: white;
+}
+.pmain{
+  display: flex;
+  width: 100%;
+}
+.pcontent{
+  width: 100%;
+  padding: 10px;
+}
+.storage{
+  /* background-color: red; */
+  height: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 20px;
+}
+.storage h2{
+  font-size: 40px;
+}
+.storagebar{
+  width: 70%;
+  background-color: rgb(217, 217, 217);
+  height: 10px;
+  border-radius: 10px;
+}
+.storagebar .used{
+  background-color: rgb(62, 62, 239);;
+  width: 10%;
+  height: 10px;
+  border-radius: 10px;
+}
+.storageview{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.snumber{
+  margin-left: 20px;
+}
+.moreinfo{
+  /* background-color: red; */
+  height: 50px;
+  display: flex;
+  align-items: center;  
+  font-size: 18px;
+  padding: 10px;
+}
+.moreinfo:hover{
+  background-color: rgb(210, 210, 210);
+}
+.cont{
+  margin-left: 10px;
+}
+.active{
+  border-bottom: 2px solid white;
+}
+.services .serv:hover{
+  transition: 1s ease;
+  border-bottom: 2px solid white;
+  
+}
+.contentf{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+.uploadside{
+  /* background-color: blue; */
+  width: 50%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 5px dashed rgba(0, 0, 255, 0.4);
+  border-radius: 20px;
+  color: rgba(0, 0, 255, 0.4);
+}
+.uploadside .upic{
+  font-size: 200px;
+  color: rgba(0, 0, 255, 0.4);
+}
+.uploadside form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.uploadside h2{
+  color:rgba(0, 0, 255, 0.4)
+}
+.uploadside form button{
+  background-color:rgba(0, 0, 255);
+  color: white;
+  border: 0px;
+  padding: 10px;
+  border-radius: 12px;
+  width: 80px;
+}
+.uploadside form button:hover{
+  background-color:rgb(91, 91, 243);
+
 }

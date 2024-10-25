@@ -1,12 +1,30 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import {useNavigate} from 'react-router-dom'
 import "../App.css";
+
+
+// const token = localStorage.getItem('token');
+// print(token)
+// if (token){
+//     FileUpload()
+// }
+// else{
+//     // window.location.href='/'
+// }
+
 const FileUpload=()=>{
     const [file,setFile]=useState(null)
     const navigate=useNavigate()
-
+    useEffect(()=>{
+        const token = sessionStorage.getItem('token');
+        console.log(token)
+        if(!token){
+            navigate('/')
+        }
+        
+    },[navigate])
 
     const handleFileChange=(e)=>{setFile(e.target.files[0])};
 
@@ -19,7 +37,7 @@ const FileUpload=()=>{
             await axios.post('http://127.0.0.1:8000/api/files/',formData,{
                 headers:{
                     'Content-Type':'multipart/form-data',
-                    'Authorization':`Bearer ${localStorage.getItem('token')}`
+                    'Authorization':`Bearer ${sessionStorage.getItem('token')}`
                 }
             });
             alert('File Uploaded SuccessFully');
@@ -35,7 +53,7 @@ const FileUpload=()=>{
         }
     }
     const logout = () => {
-        localStorage.removeItem('token');  // Remove JWT token from localStorage
+        sessionStorage.removeItem('token');  // Remove JWT token from localStorage
         window.location.href = '/';    // Redirect to login page
       };
     return (
@@ -63,12 +81,18 @@ const FileUpload=()=>{
                     </ul>
                 </div>
             </nav>
-            <div className="content">
-            <form onSubmit={handleFileUpload}>
-            <h2>UploadFile</h2>
-            <input type="file" onChange={handleFileChange} required />
-            <button type='submit'>Upload</button>
-            </form>
+            <div className="contentf">
+            <div className="uploadside">
+            <span className="material-symbols-outlined upic">
+upload
+</span>
+                <form onSubmit={handleFileUpload}>
+                <h2>Drag and Drop here !!</h2><br />
+                <h3>OR</h3>
+                <div className="inputs"><input type="file" onChange={handleFileChange} required />
+                <button type='submit'>Upload</button></div>
+                </form>
+            </div>
             </div>
         </div>
        
