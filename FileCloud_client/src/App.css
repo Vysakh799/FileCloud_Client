@@ -68,7 +68,7 @@
 }
 .main2{
   display: flex;
-  height: 92vh;
+  height: 94vh;
 }
 .sidebar{
   display: flex;
@@ -261,7 +261,7 @@
 }
 .pmain .psidebar{
   display: flex;
-  height: 89.5vh;
+  height: 95vh;
   width: 200px;
   padding:10px;
   flex-direction: column  ;

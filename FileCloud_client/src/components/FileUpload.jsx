@@ -19,7 +19,7 @@ const FileUpload=()=>{
     const navigate=useNavigate()
     useEffect(()=>{
         const token = sessionStorage.getItem('token');
-        console.log(token)
+        // console.log(token)
         if(!token){
             navigate('/')
         }

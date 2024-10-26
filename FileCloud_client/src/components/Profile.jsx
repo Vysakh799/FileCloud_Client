@@ -14,14 +14,14 @@ const Profile=()=>{
             const fetchUser = async()=>{
         
                 const token = sessionStorage.getItem('token');
-                console.log('token',token);
+                // console.log('token',token);
                 try{
                 const response = await axios.get('http://127.0.0.1:8000/api/users/me/',{
                     headers:{
                         'Authorization': `Bearer ${token}`,
                     }
                 });
-                console.log(response.status)
+                // console.log(response.status)
                 // console.log(response)
                 if(response.status==200){
                     setUser(response.data);
@@ -78,7 +78,7 @@ const Profile=()=>{
                 <div className="profpic">
                     <img src="https://cdn-icons-png.freepik.com/512/7718/7718888.png" alt="" />
                     <div className="editicon">
-                    <span class="material-symbols-outlined">edit</span>
+                    <span className="material-symbols-outlined">edit</span>
                     </div>
                 </div>
                 <div className="details">
@@ -107,7 +107,7 @@ const Profile=()=>{
                     <hr />
                     <div className="moreinfo">
                         <div className="icon">
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
 info
 </span>
                         </div>
@@ -118,7 +118,7 @@ info
                     <hr />
                     <div className="moreinfo">
                         <div className="icon">
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
 settings_backup_restore
 </span>
                         </div>
@@ -129,7 +129,7 @@ settings_backup_restore
                     <hr />
                     <div className="moreinfo">
                         <div className="icon">
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
 settings
 </span>
                         </div>
@@ -140,7 +140,7 @@ settings
                     <hr />
                     <div className="moreinfo">
                         <div className="icon">
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
 verified
 </span>
                         </div>
@@ -151,7 +151,7 @@ verified
                     <hr />
                     <div className="moreinfo">
                         <div className="icon">
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
 shield_locked
 </span>
                         </div>
@@ -162,7 +162,7 @@ shield_locked
                     <hr />
                     <div className="moreinfo">
                         <div className="icon">
-                        <span class="material-symbols-outlined">
+                        <span className="material-symbols-outlined">
 support_agent
 </span>
                         </div>
